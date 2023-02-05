@@ -47,7 +47,7 @@ html body{
     position: relative;
     top: -1px;
 }
-.selectbincolor2{
+#selectbincolor2{
     display: none;
 }
 

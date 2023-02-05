@@ -48,17 +48,24 @@ let addBoxes = ()=>{
 // top check box select
  
 let detectevent = ()=>{
+    let  anycheck = 0;
     const check = document.querySelector('#check');
     const check2 = document.querySelectorAll('.check-2');
-    let selectbincolor = document.querySelector('.selectbincolor');
-    let selectbincolor2 = document.querySelector('.selectbincolor2');
+    let selectbincolor = document.querySelector('#selectbincolor');
+    let selectbincolor2 = document.querySelector('#selectbincolor2');
     for(i=0; i<check2.length; i++ ){
         if(check.checked){
             check2[i].checked = true;
         }
         if(check2[i].checked){
-            console.log("asdf");
+            anycheck++;
+            selectbincolor.style.display = "block";
+            selectbincolor2.style.display = "none";
         }
+    }
+    if(anycheck < 1){
+        selectbincolor.style.display = "none";
+        selectbincolor2.style.display = "block"; 
     }
 }
 detectevent();
