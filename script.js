@@ -50,7 +50,7 @@ let addBoxes = ()=>{
 let detectevent = ()=>{
     let  anycheck = 0;
     const check = document.querySelector('#check');
-    const check2 = document.querySelectorAll('.check-2');
+    let check2 = document.querySelectorAll('.check-2');
     let selectbincolor = document.querySelector('#selectbincolor');
     let selectbincolor2 = document.querySelector('#selectbincolor2');
     for(i=0; i<check2.length; i++ ){
@@ -69,3 +69,14 @@ let detectevent = ()=>{
     }
 }
 detectevent();
+let deleteProduct =()=>{
+  const check2 = document.querySelectorAll('.check-2');
+  const box = document.querySelectorAll('.box');
+    for(i=0; i<check2.length;i++ ){
+        if(check2[i].checked){
+            box[i].remove();
+        }
+    }
+}
+
+
