@@ -103,8 +103,8 @@
                     <div class="box">
                         <div class="image">
                            <input type="checkbox" class="check-2">
-                            <div class="img-box">
-                                <img src="images/img-icon.png" alt="">
+                            <div class="img-box imageparentDiv">
+                                <img class="imageLinkupdate" src="images/img-icon.png" alt="productimage">
                             </div>
                         </div>
                         <div class="description">
@@ -362,6 +362,12 @@
 
     </div>
 </main>
+  <section id="editimagebox" style="display: none;">
+    <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)">
+   <label for="file" style="cursor: pointer; font-size: 30px;">Upload Image</label></p>
+   <button  onclick="closeimageeditDiv()"> OK </button>
+  </section>
+
  <script src="./script.js"></script>
 </body>
 </html>
